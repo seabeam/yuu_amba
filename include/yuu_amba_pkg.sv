@@ -9,12 +9,11 @@
     import uvm_pkg::*;
     `include "uvm_macros.svh"
 
-    import common_pkg::*;
+    import yuu_common_pkg::*;
 
     `include "yuu_amba_type.svh"
     `include "yuu_amba_item.svh"
     `include "yuu_amba_addr_map.sv"
-    //`include "yuu_amba_common_tools.svh"
 
   endpackage
 
