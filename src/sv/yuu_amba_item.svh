@@ -12,7 +12,6 @@ class yuu_amba_item extends uvm_sequence_item;
   rand yuu_amba_size_e        burst_size;
   // The type of burst: FIXED, INCR or WRAP
   rand yuu_amba_burst_type_e  burst_type;
-<<<<<<< HEAD
   // The start address issued by the master.
   rand yuu_amba_addr_t        start_address;
   // The lowest address of burst
@@ -20,11 +19,6 @@ class yuu_amba_item extends uvm_sequence_item;
   // The highest address of burst
        yuu_amba_addr_t        high_boundary;
   // The maximum number of bytes in each data transfer.
-=======
-  rand yuu_amba_addr_t        start_address;
-       yuu_amba_addr_t        low_boundary;
-       yuu_amba_addr_t        high_boundary;
->>>>>>> b159a848e7931efdd6e97003854a33145142b894
        int unsigned           number_bytes;
   // The total number of data transfers within a burst.
        int unsigned           burst_length;
