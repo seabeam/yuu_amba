@@ -6,20 +6,34 @@
 `define YUU_AMBA_ITEM_SVH
 
 class yuu_amba_item extends uvm_sequence_item;
+  // The burst length.
   rand int unsigned           len;
+  // The size of burst, 1 byte, 2 bytes etc. 
   rand yuu_amba_size_e        burst_size;
+  // The type of burst: FIXED, INCR or WRAP
   rand yuu_amba_burst_type_e  burst_type;
-  rand yuu_amba_addr_t        low_boundary;
-  rand yuu_amba_addr_t        high_boundary;
+  // The start address issued by the master.
   rand yuu_amba_addr_t        start_address;
+  // The lowest address of burst
+       yuu_amba_addr_t        low_boundary;
+  // The highest address of burst
+       yuu_amba_addr_t        high_boundary;
+  // The maximum number of bytes in each data transfer.
        int unsigned           number_bytes;
+  // The total number of data transfers within a burst.
        int unsigned           burst_length;
+  // The number of byte lanes in the data bus.
        int unsigned           data_bus_bytes;
-       int unsigned           aligned_address;
-       int unsigned           address[]; 
+  // The aligned version of the start address.
+       yuu_amba_addr_t        aligned_address;
+  // The address of transfer N in a burst.
+       yuu_amba_addr_t        address[];
+  // The lowest address within a wrapping burst.
        yuu_amba_addr_t        wrap_boundary;
-       int unsigned           lower_byte_lane[];
-       int unsigned           upper_byte_lane[];
+  // The byte lane of the lowest addressed byte of a transfer.
+       yuu_amba_lane_t        lower_byte_lane[];
+  // The byte lane of the highest addressed byte of a transfer.
+       yuu_amba_lane_t        upper_byte_lane[];
 
        boolean address_aligned_enable = False;
 

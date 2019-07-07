@@ -5,8 +5,9 @@
 `ifndef YUU_AMBA_TYPE_SVH
 `define YUU_AMBA_TYPE_SVH
   
-  typedef bit [`YUU_AMBA_BUS_ADDR_WIDTH-1:0]    yuu_amba_addr_t;
-  typedef bit [`YUU_AMBA_BUS_DATA_WIDTH-1:0]    yuu_amba_data_t;
+  typedef bit [`YUU_AMBA_BUS_ADDR_WIDTH-1:0]  yuu_amba_addr_t;
+  typedef bit [`YUU_AMBA_BUS_DATA_WIDTH-1:0]  yuu_amba_data_t;
+  typedef bit [`YUU_AMBA_LANE_WIDTH-1:0]      yuu_amba_lane_t;
 
   typedef enum int {
     YUU_AMBA_BYTE_1,
