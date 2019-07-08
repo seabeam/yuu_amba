@@ -8,7 +8,7 @@ module top;
   initial begin
     item = new("item");
     item.address_aligned_enable = True;
-    item.randomize() with {len<8;};
+    item.randomize() with {len<8; burst_type == INCR; address_aligned_enable == True;};
     item.print();
   end
 endmodule
