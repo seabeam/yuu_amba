@@ -5,16 +5,18 @@
 `ifndef YUU_AMBA_PKG_SV
 `define YUU_AMBA_PKG_SV
 
-  package yuu_amba_pkg;
-    import uvm_pkg::*;
-    `include "uvm_macros.svh"
+`include "yuu_amba_defines.svh"
 
-    import yuu_common_pkg::*;
+package yuu_amba_pkg;
+  import uvm_pkg::*;
+  `include "uvm_macros.svh"
 
-    `include "yuu_amba_type.svh"
-    `include "yuu_amba_item.svh"
-    `include "yuu_amba_addr_map.sv"
+  import yuu_common_pkg::*;
 
-  endpackage
+  `include "yuu_amba_type.svh"
+  `include "yuu_amba_item.svh"
+  `include "yuu_amba_addr_map.sv"
+
+endpackage
 
 `endif

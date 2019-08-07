@@ -18,4 +18,5 @@
   `endif
 
   `define YUU_AMBA_LANE_WIDTH  $clog2(`YUU_AMBA_BUS_DATA_WIDTH/8)
+
 `endif
