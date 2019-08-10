@@ -59,7 +59,7 @@ class yuu_amba_item extends uvm_sequence_item;
   }
 
   `uvm_object_utils_begin(yuu_amba_item)
-    `uvm_field_int      (                       len,                    UVM_ALL_ON)
+    `uvm_field_int      (                       len,                    UVM_ALL_ON | UVM_DEC)
     `uvm_field_int      (                       start_address,          UVM_ALL_ON)
     `uvm_field_array_int(                       address,                UVM_ALL_ON)
     `uvm_field_int      (                       low_boundary,           UVM_ALL_ON)

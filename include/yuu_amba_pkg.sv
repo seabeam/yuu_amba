@@ -16,7 +16,6 @@ package yuu_amba_pkg;
   `include "yuu_amba_type.svh"
   `include "yuu_amba_item.svh"
   `include "yuu_amba_addr_map.sv"
-
 endpackage
 
 `endif
